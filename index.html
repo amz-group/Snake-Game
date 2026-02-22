@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="header">
+            <h1>NEON<span>SNAKE</span></h1>
+            <div class="score-board">SCORE: <span id="score">0</span></div>
+        </div>
+
+        <div id="game-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="overlay">
+                <h2 id="status-text">READY?</h2>
+                <button onclick="startGame()">Start Game</button>
+            </div>
+        </div>
+
+        <div class="controls-grid">
+            <button class="btn up" onpointerdown="changeDir('ArrowUp')">▲</button>
+            <button class="btn left" onpointerdown="changeDir('ArrowLeft')">◀</button>
+            <button class="btn down" onpointerdown="changeDir('ArrowDown')">▼</button>
+            <button class="btn right" onpointerdown="changeDir('ArrowRight')">▶</button>
+        </div>
+
+        <p class="desktop-hint">Use Arrow Keys to Navigate</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
